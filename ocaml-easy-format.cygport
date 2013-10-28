@@ -1,0 +1,21 @@
+inherit ocaml
+
+NAME="ocaml-easy-format"
+VERSION=1.0.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="OCaml pretty-printing library"
+DESCRIPTION="This module offers a high-level and functional interface to the
+Format module of the OCaml standard library. It is a pretty-printing facility,
+i.e. it takes as input some code represented as a tree and formats this code
+into the most visually satisfying result, breaking and indenting lines of code
+where appropriate."
+HOMEPAGE="http://martin.jambon.free.fr/easy-format.html"
+SRC_URI="http://martin.jambon.free.fr/easy-format-${VERSION}.tar.bz2"
+SRC_DIR="easy-format-${VERSION}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
